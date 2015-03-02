@@ -5,6 +5,7 @@ VERSION_ALIASES =
 TITLE =			Alpine
 DESCRIPTION =		Alpine
 SOURCE_URL =		https://github.com/online-labs/image-alpine
+SHELL =			/bin/sh
 
 
 ## Image tools  (https://github.com/online-labs/image-tools)
