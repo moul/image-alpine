@@ -8,7 +8,11 @@ ENV OCS_BASE_IMAGE armbuild/ocs-alpine:latest
 
 
 # Install packages
-RUN apk add openssh
+RUN apk add \
+    openssh \
+    wget \
+    bash \
+    tar
 
 
 # Configure autostart packages
@@ -17,7 +21,7 @@ RUN rc-update add sshd \
 
 
 # Patch rootfs
-# RUN wget -qO - http://j.mp/ocs-scripts | bash
+RUN wget --no-check-certificate --quiet -O- http://j.mp/ocs-scripts | bash -e
 ADD ./patches/etc/ /etc/
 
 

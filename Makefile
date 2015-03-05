@@ -4,8 +4,8 @@ VERSION =		latest
 VERSION_ALIASES =	
 TITLE =			Alpine
 DESCRIPTION =		Alpine
-SOURCE_URL =		https://github.com/online-labs/image-alpine
-SHELL =			/bin/sh
+#SOURCE_URL =		https://github.com/online-labs/image-alpine
+SHELL =			/bin/bash
 
 
 ## Image tools  (https://github.com/online-labs/image-tools)
