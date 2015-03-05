@@ -15,14 +15,15 @@ RUN apk add \
     tar
 
 
-# Configure autostart packages
-RUN rc-update add sshd \
- && rc-status
-
-
 # Patch rootfs
 RUN wget --no-check-certificate --quiet -O- http://j.mp/ocs-scripts | bash -e
 ADD ./patches/etc/ /etc/
+
+
+# Configure autostart packages
+RUN rc-update add sshd \
+ && rc-update add oc-ssh-keys \
+ && rc-status
 
 
 # TEMPORARY DEBUG ACCESS
