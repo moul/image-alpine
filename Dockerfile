@@ -24,4 +24,5 @@ ADD ./patches/etc/ /etc/
 RUN rc-update add sshd \
  && rc-update add oc-ssh-keys \
  && rc-update add hostname \
+ && rc-update add ntpd \
  && rc-status
