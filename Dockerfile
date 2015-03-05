@@ -1,5 +1,5 @@
 ## -*- docker-image-name: "armbuild/ocs-distrib-alpine:latest" -*-
-FROM armbuild/alpine:latest
+FROM armbuild/alpine:3.1.0
 MAINTAINER Online Labs <opensource@ocs.online.net> (@online_en)
 
 
