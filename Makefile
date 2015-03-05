@@ -1,9 +1,9 @@
 DOCKER_NAMESPACE =	armbuild/
 NAME =			ocs-distrib-alpine
 VERSION =		latest
-VERSION_ALIASES =	
-TITLE =			Alpine
-DESCRIPTION =		Alpine
+VERSION_ALIASES =	3.1.0 3.1 3 edge
+TITLE =			Alpine Linux
+DESCRIPTION =		Alpine Linux
 #SOURCE_URL =		https://github.com/online-labs/image-alpine
 SHELL =			/bin/bash
 
