@@ -23,4 +23,5 @@ ADD ./patches/etc/ /etc/
 # Configure autostart packages
 RUN rc-update add sshd \
  && rc-update add oc-ssh-keys \
+ && rc-update add hostname \
  && rc-status
