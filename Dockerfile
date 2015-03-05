@@ -25,4 +25,5 @@ RUN rc-update add sshd \
  && rc-update add oc-ssh-keys \
  && rc-update add hostname \
  && rc-update add ntpd \
+ && rc-update add sysctl \
  && rc-status
