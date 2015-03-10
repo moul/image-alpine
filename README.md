@@ -5,6 +5,8 @@ Scripts to build the official Alpine image on Online Labs
 
 This image is built using [Image Tools](https://github.com/online-labs/image-tools) and depends on the [armbuild/alpine](https://registry.hub.docker.com/u/armbuild/alpine/) Docker image.
 
+<img src="http://upload.wikimedia.org/wikipedia/commons/f/f0/Alpinelinux_logo.png" width="100px" />
+
 ---
 
 **This image is meant to be used on a C1 server.**
@@ -23,3 +25,7 @@ Build and write the image to /dev/nbd1 (see [documentation](https://doc.cloud.on
     $ make install
 
 Full list of commands available at: [online-labs/image-tools](https://github.com/online-labs/image-tools/tree/master#commands)
+
+---
+
+A project by [![Online Labs](https://raw.githubusercontent.com/online-labs/doc.cloud.online.net/master/www/documentation/docs_public/contents/images/logo_footer.png)](http://labs.online.net/)
