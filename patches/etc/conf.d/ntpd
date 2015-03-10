@@ -1,0 +1,1 @@
+NTPD_OPTS="-N -p ntp.int.cloud.online.net"
