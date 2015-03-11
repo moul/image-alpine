@@ -9,6 +9,7 @@ ENV OCS_BASE_IMAGE armbuild/ocs-alpine:latest
 
 # Install packages
 RUN apk add \
+    curl \
     openssh \
     wget \
     bash \
@@ -16,7 +17,9 @@ RUN apk add \
 
 
 # Patch rootfs
-RUN wget --no-check-certificate --quiet -O- http://j.mp/ocs-scripts | bash -e
+RUN curl -L -q http://j.mp/ocs-scripts > /tmp/ocs-scripts.bash \
+ && DL=curl bash -e /tmp/ocs-scripts.bash \
+ && rm -f /tmp/ocs-scripts.bash
 ADD ./patches/etc/ /etc/
 
 
