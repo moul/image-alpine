@@ -5,7 +5,7 @@ Scripts to build the official Alpine image on Online Labs
 
 This image is built using [Image Tools](https://github.com/online-labs/image-tools) and depends on the [armbuild/alpine](https://registry.hub.docker.com/u/armbuild/alpine/) Docker image.
 
-<img src="http://upload.wikimedia.org/wikipedia/commons/f/f0/Alpinelinux_logo.png" width="100px" />
+<img src="http://alpinelinux.org/alpinelinux-logo.svg" width="400px" />
 
 ---
 
