@@ -31,3 +31,7 @@ RUN rc-update add sshd \
  && rc-update add ntpd \
  && rc-update add sysctl \
  && rc-status
+
+
+# Update permissions
+RUN chmod 700 /root
