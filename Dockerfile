@@ -8,7 +8,8 @@ ENV OCS_BASE_IMAGE armbuild/ocs-alpine:latest
 
 
 # Install packages
-RUN apk add \
+RUN apk update && \
+    apk add \
     curl \
     openssh \
     wget \
