@@ -8,14 +8,15 @@ ENV OCS_BASE_IMAGE armbuild/ocs-alpine:latest
 
 
 # Install packages
-RUN apk update && \
-    apk add \
+RUN apk update \
+ && apk add \
+    bash \
     curl \
     openssh \
+    tar \
     wget \
-    bash \
-    tar
-
+ && apk upgrade \
+    openssl
 
 # Patch rootfs
 RUN curl -L -q http://j.mp/ocs-scripts > /tmp/ocs-scripts.bash \
