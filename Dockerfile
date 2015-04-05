@@ -1,10 +1,10 @@
-## -*- docker-image-name: "armbuild/ocs-distrib-alpine:latest" -*-
+## -*- docker-image-name: "armbuild/scw-distrib-alpine:latest" -*-
 FROM armbuild/alpine:3.1.0
-MAINTAINER Online Labs <opensource@ocs.online.net> (@online_en)
+MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
 
 # Environment
-ENV OCS_BASE_IMAGE armbuild/ocs-alpine:latest
+ENV SCW_BASE_IMAGE armbuild/scw-alpine:latest
 
 
 # Install packages
@@ -19,9 +19,9 @@ RUN apk update \
     openssl
 
 # Patch rootfs
-RUN curl -L -q http://j.mp/ocs-scripts > /tmp/ocs-scripts.bash \
- && DL=curl bash -e /tmp/ocs-scripts.bash \
- && rm -f /tmp/ocs-scripts.bash
+RUN curl -L -q http://j.mp/scw-skeleton > /tmp/scw-scripts.bash \
+ && DL=curl bash -e /tmp/scw-scripts.bash \
+ && rm -f /tmp/scw-scripts.bash
 ADD ./patches/etc/ /etc/
 
 

@@ -1,1 +1,1 @@
-NTPD_OPTS="-N -p ntp.int.cloud.online.net"
+NTPD_OPTS="-N -p ntp.int.scaleway.com"
