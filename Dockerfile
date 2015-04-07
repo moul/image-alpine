@@ -19,7 +19,7 @@ RUN apk update \
     openssl
 
 # Patch rootfs
-RUN curl -L -q http://j.mp/scw-skeleton > /tmp/scw-scripts.bash \
+RUN curl -Lkq http://j.mp/scw-skeleton > /tmp/scw-scripts.bash \
  && DL=curl bash -e /tmp/scw-scripts.bash \
  && rm -f /tmp/scw-scripts.bash
 ADD ./patches/etc/ /etc/
