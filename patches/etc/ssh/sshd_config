@@ -41,7 +41,7 @@
 # Authentication:
 
 #LoginGraceTime 2m
-#PermitRootLogin yes
+PermitRootLogin without-password
 #StrictModes yes
 #MaxAuthTries 6
 #MaxSessions 10
@@ -128,7 +128,7 @@ Subsystem	sftp	/usr/lib/ssh/sftp-server
 # the following are HPN related configuration options
 # tcp receive buffer polling. disable in non autotuning kernels
 #TcpRcvBufPoll yes
- 
+
 # disable hpn performance boosts
 #HPNDisabled no
 
