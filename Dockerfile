@@ -18,19 +18,20 @@ RUN apk update \
  && apk upgrade \
     openssl
 
+
 # Patch rootfs
 RUN curl -Lkq http://j.mp/scw-skeleton > /tmp/scw-scripts.bash \
- && DL=curl bash -e /tmp/scw-scripts.bash \
+ && DL=curl FLAVORS=openrc,common bash -e /tmp/scw-scripts.bash \
  && rm -f /tmp/scw-scripts.bash
 ADD ./patches/etc/ /etc/
 
 
 # Configure autostart packages
-RUN rc-update add sshd \
- && rc-update add oc-ssh-keys \
- && rc-update add hostname \
- && rc-update add ntpd \
- && rc-update add sysctl \
+RUN rc-update add sshd default\
+ && rc-update add ssh-keys default \
+ && rc-update add hostname default \
+ && rc-update add ntpd default \
+ && rc-update add sysctl default \
  && rc-status
 
 
