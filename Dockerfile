@@ -32,6 +32,7 @@ RUN rc-update add sshd default\
  && rc-update add hostname default \
  && rc-update add ntpd default \
  && rc-update add sysctl default \
+ && rc-update add initramfs-shutdown shutdown \
  && rc-status
 
 
