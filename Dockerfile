@@ -24,6 +24,7 @@ RUN curl -Lkq http://j.mp/scw-skeleton > /tmp/scw-scripts.bash \
  && DL=curl FLAVORS=openrc,common bash -e /tmp/scw-scripts.bash \
  && rm -f /tmp/scw-scripts.bash
 ADD ./patches/etc/ /etc/
+ADD ./patches/usr/ /usr/
 
 
 # Configure autostart packages
