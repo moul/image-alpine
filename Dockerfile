@@ -21,7 +21,7 @@ RUN apk update \
 
 # Patch rootfs
 RUN curl -Lkq http://j.mp/scw-skeleton > /tmp/scw-scripts.bash \
- && DL=curl FLAVORS=openrc,common bash -e /tmp/scw-scripts.bash \
+ && DL=curl FLAVORS=openrc,common,docker-based bash -e /tmp/scw-scripts.bash \
  && rm -f /tmp/scw-scripts.bash \
  && /usr/local/sbin/builder-enter
 ADD ./patches/etc/ /etc/
