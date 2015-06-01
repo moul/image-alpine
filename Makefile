@@ -6,9 +6,10 @@ TITLE =			Alpine Linux
 DESCRIPTION =		Alpine Linux
 SOURCE_URL =		https://github.com/scaleway/image-alpine
 SHELL =			/bin/bash
-
-
 ASSETS =		patches/usr/bin/qemu-arm-static patches/usr/local/bin/qemu-arm-static
+
+
+all: help
 
 
 patches/usr/bin/qemu-arm-static:
@@ -29,5 +30,3 @@ all:	docker-rules.mk
 docker-rules.mk:
 	wget -qO - http://j.mp/scw-builder | bash
 -include docker-rules.mk
-
-
