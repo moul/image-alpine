@@ -7,6 +7,10 @@ MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 ENV SCW_BASE_IMAGE armbuild/scw-alpine:latest
 
 
+# Add cross-build binaries
+ADD ./patches/usr/ /usr/
+
+
 # Install packages
 RUN apk update \
  && apk add \
