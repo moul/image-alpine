@@ -10,7 +10,7 @@ depend() {
     after killprocs savecache mount-ro
 }
 
-stop() {
+start() {
     DO_PIVOT=1 /run/initramfs/shutdown reboot
     return 0
 }
