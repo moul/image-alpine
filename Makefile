@@ -1,7 +1,7 @@
 DOCKER_NAMESPACE =	armbuild/
 NAME =			scw-distrib-alpine
 VERSION =		latest
-VERSION_ALIASES =	3.1.0 3.1 3 edge
+VERSION_ALIASES =	3.2.0 3.2 3 edge
 TITLE =			Alpine Linux
 DESCRIPTION =		Alpine Linux
 SOURCE_URL =		https://github.com/scaleway/image-alpine

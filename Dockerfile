@@ -1,5 +1,5 @@
 ## -*- docker-image-name: "armbuild/scw-distrib-alpine:latest" -*-
-FROM armbuild/alpine:3.1.0
+FROM armbuild/alpine:3.2.0
 MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
 
